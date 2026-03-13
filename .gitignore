@@ -1,0 +1,5 @@
+sentimentenv/
+__pycache__
+.vscode
+models/
+Sentiment_Analysis_Dataset.csv
