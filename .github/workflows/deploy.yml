@@ -24,4 +24,7 @@ jobs:
             cd ~/Sentiment-Analysis
             git pull origin main
             pkill -f streamlit || true
-            nohup streamlit run app.py --server.port 8501 --server.headless true > ~/streamlit.log 2>&1 &
+            sleep 2
+            nohup streamlit run app.py --server.port 8501 --server.headless true > ~/streamlit.log 2>&1 </dev/null &
+            disown
+            echo "App started!"
