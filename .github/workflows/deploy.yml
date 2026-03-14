@@ -19,12 +19,5 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          command_timeout: 5m
-          script: |
-            cd ~/Sentiment-Analysis
-            git pull origin main
-            pkill -f streamlit || true
-            sleep 2
-            nohup streamlit run app.py --server.port 8501 --server.headless true > ~/streamlit.log 2>&1 </dev/null &
-            disown
-            echo "App started!"
+          command_timeout: 2m
+          script: bash ~/deploy.sh
