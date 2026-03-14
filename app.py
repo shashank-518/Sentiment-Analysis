@@ -108,7 +108,7 @@ def get_model():
 
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("<h1 style='text-align: center; color: white;'>⚡ Sentiment AI</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #94a3b8;'>Real-time Recurrent Neural Network analysis</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #94a3b8;'>Real-time Recurrent Neural Network analysis v2.0</p>", unsafe_allow_html=True)
 
 result_data = get_model()
 model, tokenizer, config = result_data[0], result_data[1], result_data[2]
